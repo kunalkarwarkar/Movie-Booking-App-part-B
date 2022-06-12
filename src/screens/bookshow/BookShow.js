@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Header from "../../common/header/Header";
+import Header from "../../common/Header/Header";
 import Typography from "@material-ui/core/Typography";
 import "./BookShow.css";
 import Card from "@material-ui/core/Card";
@@ -32,37 +32,6 @@ const BookShow = (props) => {
   const [showDates, setShowDates] = useState([]);
   const [originalShows, setOriginalShows] = useState([]);
   const [showId, setShowId] = useState("");
-
-  useEffect(() => {
-    let dataShows = null;
-
-    fetch(props.baseUrl + "movies/" + props.match.params.id + "/shows", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "Cache-Control": "no-cache",
-      },
-      body: dataShows,
-    })
-      .then((response) => response.json())
-      .then((response) => {
-        setOriginalShows(response.shows);
-
-        let newLocations = [];
-
-        for (let show of response.shows) {
-          newLocations.push({
-            id: show.theatre.city,
-            location: show.theatre.city,
-          });
-        }
-
-        newLocations = newLocations.filter(
-          (loc, index, self) => index === self.findIndex((c) => c.id === loc.id)
-        );
-        setLocations(newLocations);
-      });
-  }, []);
 
   const locationChangeHandler = (event) => {
     setLocation(event.target.value);
@@ -196,7 +165,8 @@ const BookShow = (props) => {
       <Header baseUrl={props.baseUrl} />
       <div className="bookShow">
         <Typography className="back">
-          <Link to={"/movie/" + props.match.params.id}>
+          {/* <Link to={"/movie/" + props.match.params.id}> */}
+          <Link to={"/"}>
             &#60; Back to Movie Details
           </Link>
         </Typography>

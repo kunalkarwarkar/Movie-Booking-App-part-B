@@ -1,0 +1,62 @@
+.heading {
+    display: block;
+    background-color: #ff9999;
+    padding: 8px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .flex-container {
+    display: flex;
+}
+.left {
+    width: 76%;
+  /* display: flex; */
+  margin: 16px;
+}
+.right {
+    width: 24%;
+    margin: 16px;
+  }
+  .leftListItem {
+    margin: 20px;
+    cursor: pointer;
+  }
+  .loginbtn {
+    background-color: white;
+    float: right;
+    width: 7%;
+    margin-right: 1%;
+    padding: 0 10px;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* display: none; */
+  }
+  .logoutbtn {
+    background-color: white;
+    float: right;
+    width: 7%;
+    margin-right: 1%;
+    padding: 0 10px;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+  }
+  .hiddenbtn {
+    color: white;
+    background-color: blue;
+    float: right;
+    margin-right: 5%;
+    padding: 0 10px;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
+    display: none;
+  }
+  .image {
+    object-fit: contain;
+    width: 100%;
+  }
